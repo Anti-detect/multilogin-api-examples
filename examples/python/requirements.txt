@@ -1,0 +1,6 @@
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Optional:
+# playwright>=1.40.0  → playwright_connect.py
+# selenium>=4.0.0     → selenium_connect.py

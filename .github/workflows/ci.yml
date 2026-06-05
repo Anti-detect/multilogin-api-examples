@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r examples/python/requirements.txt
+          pip install -r examples/python/requirements-dev.txt
+
+      - name: Unit tests (mocked)
+        run: |
+          cd examples/python
+          python -m unittest discover -s tests -v
+
+      - name: Ruff lint
+        run: |
+          cd examples/python
+          ruff check multilogin_client.py list_profiles.py health_check.py batch_workflow.py session_context_demo.py tests/ || true
+
+  validate-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check docs exist
+        run: |
+          test -f README.md
+          test -f docs/api-quickstart.md
+          test -f docs/api-reference.md

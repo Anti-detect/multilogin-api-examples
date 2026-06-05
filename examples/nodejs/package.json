@@ -1,0 +1,15 @@
+{
+  "name": "multilogin-api-examples-node",
+  "version": "1.0.0",
+  "description": "Node.js examples for Multilogin X Local API",
+  "type": "module",
+  "scripts": {
+    "health": "node health-check.js",
+    "list": "node list-profiles.js",
+    "start": "node start-profile.js",
+    "puppeteer": "node puppeteer-connect.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

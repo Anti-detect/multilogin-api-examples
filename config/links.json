@@ -1,0 +1,14 @@
+{
+  "affiliate_pricing": "https://multilogin.com/pricing/?utm_source=saas&utm_medium=partner&a_aid=saas&a_bid=f5fad549",
+  "official_site": "https://multilogin.com/",
+  "postman_api": "https://documenter.getpostman.com/view/28533318/2s946h9Cv9",
+  "help_center": "https://multilogin.com/help/",
+  "promo_codes": {
+    "SAAS50": "50% off new subscriptions",
+    "MIN50": "50% off Cloud Phone"
+  },
+  "github": {
+    "owner": "Anti-detect",
+    "repo": "multilogin-api-examples"
+  }
+}
